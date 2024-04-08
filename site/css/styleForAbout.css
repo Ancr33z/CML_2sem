@@ -1,0 +1,253 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  width: 220px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s all;
+  outline: 0;
+}
+.btn:hover {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn_white {
+  background-color: #fff;
+}
+
+.btn_dark {
+  background-color: #303030;
+  color: #fff;
+  border: none;
+}
+
+.btn_min {
+  height: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.divider {
+  width: 330px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+  padding: 0 100px;
+}
+.header .header__background {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 100%;
+  height: 110px;
+  z-index: -2;
+  left: 0;
+}
+.header .header__left-block {
+  display: flex;
+  justify-content: space-between;
+  min-width: 650px;
+}
+.header .header__logo {
+  max-width: 170px;
+}
+.header .header__logo img {
+  width: 100%;
+}
+.header .header__links {
+  display: flex;
+  align-items: center;
+}
+.header .header__link {
+  position: relative;
+  margin-right: 45px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #303030;
+}
+.header .header__link:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 110%;
+  left: -5%;
+  bottom: -1px;
+  z-index: -1;
+  height: 8px;
+  background: #54ed39;
+}
+.header .header__link:last-child {
+  margin-right: 0;
+}
+
+.backgroundFoto {
+  opacity: 0.7;
+  position: fixed;
+  background: url(/img/tabs/post.jpg) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -3;
+}
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  margin: 70px 0;
+}
+
+.about__container {
+  padding: 40px 60px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.658);
+}
+
+.about__title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.about__text {
+  font-weight: 200;
+}
+
+.about__cont {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 110px;
+}
+
+.about__container__end {
+  padding: 40px 60px;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.658);
+}
+
+.footer {
+  min-height: 180px;
+  background-color: #303030;
+  padding: 45px 0 50px 0;
+  color: #fff;
+  top: auto;
+  bottom: 0;
+}
+.footer .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer .subtitle {
+  font-size: 20px;
+}
+.footer .link {
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+.footer .call {
+  text-align: right;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal .btn {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.modal__dialog {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.modal__content {
+  position: relative;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 30px;
+  color: #000;
+  opacity: 0.5;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal__title {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.modal__input {
+  display: block;
+  margin: 20px auto 20px auto;
+  width: 280px;
+  height: 50px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 20px;
+  outline: 0;
+}
