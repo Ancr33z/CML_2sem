@@ -11,13 +11,15 @@
 <header class="header">
     <div class="header__left-block">
         <div class="header__logo">
-            <a href="/Main.html"><img src="icons/logo.svg" alt="Логотип"></a>
+            <a href="/Main.html"><img src="icons/Group 5.svg" alt="Логотип"></a>
         </div>
+        <div class="header__slogan">Живи полной жизнью</div>
         <nav class="header__links">
             <a href="#" class="header__link">Доставка питания</a>
             <a href="#" class="header__link">Расчёт питания</a>
             <a href="/О нас.html" class="header__link">О нас</a>
         </nav>
+        <div class="header__burger"><img src="/icons/burger.svg" alt=""></div>
     </div>
     <div class="header__right-block">
         <button data-modal class="btn btn_white">Связаться с нами</button>
@@ -58,8 +60,7 @@
                     <img src="img/tabs/post.jpg" alt="post">
                     <div class="tabcontent__descr">
                         Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие
-                        продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все
-                        будет Ом!
+                        продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе!
                     </div>
                 </div>
                 <div class="tabcontent">
@@ -105,17 +106,21 @@
         </div>
         <div class="container">
             <div class="offer__advantages">
-                <h2>Быстро и полезно</h2>
-                <div class="offer__advantages-text">
-                    Готовка дома занимает много сил, времени и нервов. Мы привозим еду сразу на целый день, и ты
-                    можешь
-                    действовать так, как тебе удобно, не подстраиваясь ни под кого и будучи уверенным в качестве
-                    продукта!
+                <div class="offer_advantages-container">
+                    <h2>Быстро и полезно</h2>
+                    <div class="offer__advantages-text">
+                        Готовка дома занимает много сил, времени и нервов. Мы привозим еду сразу на целый день, и ты
+                        можешь
+                        действовать так, как тебе удобно, не подстраиваясь ни под кого и будучи уверенным в качестве
+                        продукта!
+                    </div>
                 </div>
-                <h2>Правильный рацион</h2>
-                <div class="offer__advantages-text">
-                    Мы разработали специальное меню, где учтены все нюансы правильного питания, от баланса БЖУ до их
-                    приготовления и дробления рациона.
+                <div class="offer_advantages-container">
+                    <h2>Правильный рацион</h2>
+                    <div class="offer__advantages-text">
+                        Мы разработали специальное меню, где учтены все нюансы правильного питания, от баланса БЖУ до их
+                        приготовления и дробления рациона.
+                    </div>
                 </div>
             </div>
             <div class="offer__slider">
@@ -149,27 +154,26 @@
     </div>
 
     <div class="divider"></div>
-
-    <div class="divider"></div>
-
     <div class="menu">
         <h2 class="title">Наше меню на день</h2>
 
         <div class="menu__field">
             <div class="container">
-
             </div>
         </div>
     </div>
+    <div class="divider"></div>
 
     <div class="order">
         <div class="container">
             <div class="title">Заказывай пробный день прямо сейчас!</div>
             <form action="#" class="order__form">
-                <input required placeholder="Ваше имя" name="name" type="text" class="order__input">
-                <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="order__input">
-                <img src="icons/right.svg" alt="right">
-                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                <input required placeholder="Ваше имя" name="name" type="text" class="order__input order_mob">
+                <input required placeholder="Ваш номер телефона" name="phone" type="phone"
+                    class="order__input order_mob">
+                <img src="icons/right.svg" alt="right" class="right__arrow">
+                <img src="icons/down.svg" alt="down" class="down__arrow">
+                <button class="btn btn_dark btn_min order_mob">Перезвонить мне</button>
             </form>
         </div>
     </div>
@@ -236,7 +240,7 @@
     <div class="modal__dialog">
         <div class="modal__content">
             <form action="#">
-                <div data-close class="modal__close">&times;</div>
+                <div data-close class="modal__close" data-close>&times;</div>
                 <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
                 <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
                 <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
@@ -246,6 +250,6 @@
     </div>
 </div>
 </body>
-<script src="/js/script.js"></script>
+<script src="js/script.js"></script>
 
 </html>
