@@ -222,8 +222,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 element.classList.add(this.element);
             } else {
                 this.classes.forEach(className => element.classList.add(className));
-
             }
+
 
             element.innerHTML = `
                 <img src=${this.src} alt=${this.alt}>
@@ -238,6 +238,10 @@ window.addEventListener('DOMContentLoaded', () => {
             this.parent.append(element);
         }
     }
+
+    // const xmlhttp = new XMLHttpRequest();
+    // xmlhttp.open("GET", "cd_catalog.xml", false);
+
 
 
     new MenuCard(
@@ -269,9 +273,21 @@ window.addEventListener('DOMContentLoaded', () => {
         'menu__item'
     ).render();
 
+    const response = fetch('index.xml');
+    const xmlDocText = response.text();
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlDocText, "text/xml");
+    const students = xmlDoc.querySelectorAll("student");
 
-    const xmlParser = new DOMParser();
-    const xmlDocument = xmlParser.parseFromString(xmlString, 'text/xml');
+    const tableBody = document.querySelector("#students-table tbody");
+    students.forEach(student => {
+        const name = student.querySelector("name").textContent;
+        const age = student.querySelector("age").textContent;
+        const grade = student.querySelector("grade").textContent;
+
+        const row = `<tr><td>${name}</td><td>${age}</td><td>${grade}</td></tr>`;
+        tableBody.innerHTML += row;
+    });
 
     //forms
 
