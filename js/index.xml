@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <elementBlock>
-    <imagine src="img/tabs/vegy.jpg" alt="vegy">
-        <headTitle3 class="menu__item-subtitle">Меню "Фитнес"</headTitle3>
-        <textBlock class="menu__item-descr">Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов.Продукт активных и здоровых людей.Это абсолютно новый продукт с оптимальной ценой и высоким качеством!</textBlock>
-        <priceBlock class="menu__item-total">
-            <span>9</span>
-        </priceBlock>
-    </elementBlock>
+    <imagine>img/tabs/vegy.jpg</imagine>
+    <imgAlt>vegy</imgAlt>
+    <headTitle3 >Меню "Фитнес"</headTitle3>
+    <textBlock >Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов.Продукт активных и здоровых людей.Это абсолютно новый продукт с оптимальной ценой и высоким качеством!</textBlock>
+    <priceBlock>
+        9
+    </priceBlock>
+</elementBlock>
+<elementBlock>
+    <imagine>img/tabs/vegy.jpg</imagine>
+    <headTitle3>Меню "Фитнес"</headTitle3>
+    <textBlock>Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов.Продукт активных и здоровых людей.Это абсолютно новый продукт с оптимальной ценой и высоким качеством!</textBlock>
+    <priceBlock class="menu__item-total">
+        <span>9</span>
+    </priceBlock>
+</elementBlock>
+<elementBlock>
+    <imagine alt="vegy">img/tabs/vegy.jpg</imagine>
+    <headTitle3 class="menu__item-subtitle">Меню "Фитнес"</headTitle3>
+    <textBlock class="menu__item-descr">Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов.Продукт активных и здоровых людей.Это абсолютно новый продукт с оптимальной ценой и высоким качеством!</textBlock>
+    <priceBlock class="menu__item-total">
+        <span>9</span>
+    </priceBlock>
+</elementBlock>
+<elementBlock>
+    <imagine alt="vegy">img/tabs/vegy.jpg</imagine>
+    <headTitle3 class="menu__item-subtitle">Меню "Фитнес"</headTitle3>
+    <textBlock class="menu__item-descr">Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов.Продукт активных и здоровых людей.Это абсолютно новый продукт с оптимальной ценой и высоким качеством!</textBlock>
+    <priceBlock class="menu__item-total">
+        <span>9</span>
+    </priceBlock>
+</elementBlock>
+    

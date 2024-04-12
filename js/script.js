@@ -278,16 +278,27 @@ window.addEventListener('DOMContentLoaded', () => {
             return response.text();
         })
         .then(function (xmlDocText) {
-            var parser = new DOMParser();
-            var xmlDoc = parser.parseFromString(xmlDocText, "text/xml");
-            var students = xmlDoc.querySelectorAll("student");
-            var tableBody = document.querySelector("#students-table tbody");
-            students.forEach(function (student) {
-                var name = student.querySelector("name").textContent;
-                var age = student.querySelector("age").textContent;
-                var grade = student.querySelector("grade").textContent;
-                var row = "<tr><td>" + name + "</td><td>" + age + "</td><td>" + grade + "</td></tr>";
-                tableBody.innerHTML += row;
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlDocText, "text/xml");
+            const MenuCards = xmlDoc.querySelectorAll("elementBlock");
+            const tableBody = document.querySelector(".container");
+            MenuCards.forEach(function (student) {
+                const scr = student.querySelector("imagine").textContent;
+                const alt = student.querySelector("imgAlt").textContent;
+                const title = student.querySelector("headTitle3").textContent;
+                const text = student.querySelector("textBlock").textContent;
+                const price = student.querySelector("priceBlock").textContent;
+                tableBody.innerHTML += `
+                <div class="menu__item">
+                    <img src=${scr} alt=${alt}>
+                    <h3 class="menu__item-subtitle">${title}</h3>
+                    <div class="menu__item-descr">${text}</div>
+                    <div class="menu__item-divider"></div>
+                    <div class="menu__item-price">
+                        <div class="menu__item-cost">Цена:</div>
+                        <div class="menu__item-total"><span>${price * 3}</span> руб/день</div>
+                    </div>
+                </div>`;
             });
         })
         .catch(function (error) {
