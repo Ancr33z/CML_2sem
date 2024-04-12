@@ -273,7 +273,7 @@ window.addEventListener('DOMContentLoaded', () => {
         'menu__item'
     ).render();
 
-    fetch('students.xml')
+    fetch('index.xml')
         .then(function (response) {
             return response.text();
         })
