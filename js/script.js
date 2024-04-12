@@ -273,21 +273,26 @@ window.addEventListener('DOMContentLoaded', () => {
         'menu__item'
     ).render();
 
-    const response = fetch('index.xml');
-    const xmlDocText = response.text();
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xmlDocText, "text/xml");
-    const students = xmlDoc.querySelectorAll("student");
-
-    const tableBody = document.querySelector("#students-table tbody");
-    students.forEach(student => {
-        const name = student.querySelector("name").textContent;
-        const age = student.querySelector("age").textContent;
-        const grade = student.querySelector("grade").textContent;
-
-        const row = `<tr><td>${name}</td><td>${age}</td><td>${grade}</td></tr>`;
-        tableBody.innerHTML += row;
-    });
+    fetch('students.xml')
+        .then(function (response) {
+            return response.text();
+        })
+        .then(function (xmlDocText) {
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(xmlDocText, "text/xml");
+            var students = xmlDoc.querySelectorAll("student");
+            var tableBody = document.querySelector("#students-table tbody");
+            students.forEach(function (student) {
+                var name = student.querySelector("name").textContent;
+                var age = student.querySelector("age").textContent;
+                var grade = student.querySelector("grade").textContent;
+                var row = "<tr><td>" + name + "</td><td>" + age + "</td><td>" + grade + "</td></tr>";
+                tableBody.innerHTML += row;
+            });
+        })
+        .catch(function (error) {
+            console.error('Error fetching or parsing XML:', error);
+        });
 
     //forms
 
