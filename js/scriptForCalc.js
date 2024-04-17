@@ -43,21 +43,9 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
-
-
-    function showOffer() {
-        offers[current].style.display = 'block';
-        currentValueOffer.textContent = '0' + (current + 1);
-    }
-
-
-
     window.addEventListener('scroll', showModalByScroll)
 
     // Класс для создания карточек
-
-
 
     fetch('js/index.xml')
         .then(function (response) {
