@@ -1,14 +1,16 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+
+
+
+
+
+
     const tabs = document.querySelectorAll('.tabheader__item'),
         tabsContent = document.querySelectorAll('.tabcontent'),
-        tabsParent = document.querySelector('.tabheader__items'),
-        offers = document.querySelectorAll('.offer__slide'),
-        offerSwitchPrev = document.querySelector('.offer__slider-prev'),
-        offerSwitchNext = document.querySelector('.offer__slider-next'),
-        currentValueOffer = document.querySelector('#current');
+        tabsParent = document.querySelector('.tabheader__items');
 
-    let current = +currentValueOffer.textContent - 1;
+
 
 
     function hideTabContent(tab, tabItem) {
@@ -35,8 +37,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     hideTabContent(tabsContent, tabs);
     showTabContent();
-    hideofferTabContent(offers);
-    showOffer();
+    // hideofferTabContent(offers);
+    // showOffer();
 
 
 
@@ -160,150 +162,101 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const slidesWrapper = document.querySelector('.offer__slider-wrapper'),
+        slidesField = document.querySelector('.offer__slider-inner'),
+        offers = document.querySelectorAll('.offer__slide'),
+        offerSwitchPrev = document.querySelector('.offer__slider-prev'),
+        offerSwitchNext = document.querySelector('.offer__slider-next'),
+        currentValueOffer = document.querySelector('#current'),
+        width = window.getComputedStyle(slidesWrapper).width;
+
+    let current = 1,
+        offset = 0;
 
 
 
-    function showOffer() {
-        offers[current].style.display = 'block';
-        currentValueOffer.textContent = '0' + (current + 1);
-    }
+    slidesField.style.width = 100 * offers.length + '%';
+    slidesField.style.display = 'flex';
+    slidesField.style.transition = '0.5s all';
+
+    slidesWrapper.style.overflow = 'hidden';
+
+    offers.forEach(slide => {
+        slide.style.width = width;
+    });
+
+    offerSwitchNext.addEventListener('click', () => {
+        if (offset == +width.slice(0, width.length - 2) * (offers.length - 1)) {
+            offset = 0;
+        } else {
+            offset += +width.slice(0, width.length - 2);
+        }
 
 
-
-    offerSwitchNext.addEventListener('click', event => {
-        if (current < 3) {
+        slidesField.style.transform = `translateX(-${offset}px)`
+        if (current == offers.length) {
+            current = 1;
+        } else {
             current++;
-            hideofferTabContent(offers);
-            showOffer();
         }
-        else {
-            current -= 3;
-            hideofferTabContent(offers);
-            showOffer();
-        }
+        currentValueOffer.textContent = `0${current}`;
     });
 
-    offerSwitchPrev.addEventListener('click', event => {
-        if (current > 0) {
+    offerSwitchPrev.addEventListener('click', () => {
+
+        if (offset == 0) {
+            offset = +width.slice(0, width.length - 2) * (offers.length - 1)
+        } else {
+            offset -= +width.slice(0, width.length - 2);
+        }
+
+
+        slidesField.style.transform = `translateX(-${offset}px)`;
+        if (current == 1) {
+            current = offers.length;
+        } else {
             current--;
-            hideofferTabContent(offers);
-            showOffer();
         }
-        else {
-            current += 3;
-            hideofferTabContent(offers);
-            showOffer();
-        }
+        currentValueOffer.textContent = `0${current}`;
     });
+
+
+
+
+    // function showOffer() {
+    //     offers[current].style.display = 'block';
+    //     currentValueOffer.textContent = '0' + (current + 1);
+    // }
+
+    // offerSwitchNext.addEventListener('click', event => {
+    //     if (current < 3) {
+    //         current++;
+    //         hideofferTabContent(offers);
+    //         showOffer();
+    //     }
+    //     else {
+    //         current -= 3;
+    //         hideofferTabContent(offers);
+    //         showOffer();
+    //     }
+    // });
+
+    // offerSwitchPrev.addEventListener('click', event => {
+    //     if (current > 0) {
+    //         current--;
+    //         hideofferTabContent(offers);
+    //         showOffer();
+    //     }
+    //     else {
+    //         current += 3;
+    //         hideofferTabContent(offers);
+    //         showOffer();
+    //     }
+    // });
+
+
+
     window.addEventListener('scroll', showModalByScroll)
-
-    // Класс для создания карточек
-
-    class MenuCard {
-        constructor(src, alt, title, descr, price, parentSelector, ...classes) {
-            this.src = src;
-            this.alt = alt;
-            this.title = title;
-            this.descr = descr;
-            this.price = price;
-            this.classes = classes;
-            this.parent = document.querySelector(parentSelector);
-            this.transfer = 3;
-            this.changeToBLR();
-        }
-
-        changeToBLR() {
-            this.price = this.price * this.transfer;
-        }
-        render() {
-            const element = document.createElement('div');
-            if (this.classes.length === 0) {
-                this.element = 'menu__item';
-                element.classList.add(this.element);
-            } else {
-                this.classes.forEach(className => element.classList.add(className));
-            }
-
-
-            element.innerHTML = `
-                <img src=${this.src} alt=${this.alt}>
-                <h3 class="menu__item-subtitle">${this.title}</h3>
-                <div class="menu__item-descr">${this.descr}</div>
-                <div class="menu__item-divider"></div>
-                <div class="menu__item-price">
-                    <div class="menu__item-cost">Цена:</div>
-                    <div class="menu__item-total"><span>${this.price}</span> руб/день</div>
-                </div>
-            `;
-            this.parent.append(element);
-        }
-    }
-
-    // const xmlhttp = new XMLHttpRequest();
-    // xmlhttp.open("GET", "cd_catalog.xml", false);
-
-
-
-    new MenuCard(
-        "img/tabs/vegy.jpg",
-        "vegy",
-        'Меню "Фитнес"',
-        'Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов.Продукт активных и здоровых людей.Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
-        9,
-        '.menu .container',
-        'menu__item',
-        'big'
-    ).render();
-    new MenuCard(
-        "img/tabs/elite.jpg",
-        "elite",
-        'Меню "Премиум"',
-        'В меню “Премиум” мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода  в ресторан!',
-        14,
-        '.menu .container',
-        'menu__item'
-    ).render();
-    new MenuCard(
-        "img/tabs/post.jpg",
-        "post",
-        'Меню "Постное"',
-        'Меню “Постное” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения, молоко из миндаля, овса, кокоса или гречки, правильное количество белков за счет тофу и импортных вегетарианских стейков.',
-        21,
-        '.menu .container',
-        'menu__item'
-    ).render();
-
-    fetch('index.xml')
-        .then(function (response) {
-            return response.text();
-        })
-        .then(function (xmlDocText) {
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(xmlDocText, "text/xml");
-            const MenuCards = xmlDoc.querySelectorAll("elementBlock");
-            const tableBody = document.querySelector(".container");
-            MenuCards.forEach(function (student) {
-                const scr = student.querySelector("imagine").textContent;
-                const alt = student.querySelector("imgAlt").textContent;
-                const title = student.querySelector("headTitle3").textContent;
-                const text = student.querySelector("textBlock").textContent;
-                const price = student.querySelector("priceBlock").textContent;
-                tableBody.innerHTML += `
-                <div class="menu__item">
-                    <img src=${scr} alt=${alt}>
-                    <h3 class="menu__item-subtitle">${title}</h3>
-                    <div class="menu__item-descr">${text}</div>
-                    <div class="menu__item-divider"></div>
-                    <div class="menu__item-price">
-                        <div class="menu__item-cost">Цена:</div>
-                        <div class="menu__item-total"><span>${price * 3}</span> руб/день</div>
-                    </div>
-                </div>`;
-            });
-        })
-        .catch(function (error) {
-            console.error('Error fetching or parsing XML:', error);
-        });
 
     //forms
 
@@ -322,30 +275,42 @@ window.addEventListener('DOMContentLoaded', () => {
     function postData(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            form.reset();
-            showThanksModal(message.success);
+
             const statusMessage = document.createElement('img');
             statusMessage.src = message.loading;
+            statusMessage.style.cssText = `
+                display: block;
+                margin: 0 auto;
+            `;
+
             form.insertAdjacentElement('afterend', statusMessage);
-            statusMessage.remove();
-            // statusMessage.textContent = message.loading;
 
+            const formData = new FormData(form);
 
-            // const request = new XMLHttpRequest();
-            // request.open('POST', 'server.php');
+            const object = {};
+            formData.forEach(function (value, key) {
+                object[key] = value;
+            });
 
-            // const formData = new FormData(form);
+            const request = new XMLHttpRequest();
+            request.open('POST', 'index.xml');
 
-            // request.send(formData);
-
-            // request.addEventListener('load', () => {
-            //     if (request.status === 200) {
-            //         console.log(request.response);
-            //     } else {
-            //         statusMessage.textContent = message.failure;
-            //     }
-            // });
-
+            fetch('js/index.xml',
+                {
+                    headers: {
+                        'Content-type': 'application/xml'
+                    },
+                }
+            ).then(data => data.text())
+                .then(data => {
+                    console.log(data);
+                    showThanksModal(message.success);
+                    statusMessage.remove();
+                }).catch(() => {
+                    showThanksModal(message.failure);
+                }).finally(() => {
+                    form.reset();
+                });
         });
     };
 
@@ -358,19 +323,19 @@ window.addEventListener('DOMContentLoaded', () => {
         const thanksModal = document.createElement('div');
         thanksModal.classList.add('modal__dialog');
         thanksModal.innerHTML = `
-                <div class="modal__content">
-                    <div class="modal__close" data-close>&times;</div>
-                    <div class="modal__title">${message}</div >
-                </div >
-            `;
+            <div class="modal__content">
+                <div class="modal__close" data-close>×</div>
+                <div class="modal__title">${message}</div>
+            </div>
+        `;
         document.querySelector('.modal').append(thanksModal);
         setTimeout(() => {
             thanksModal.remove();
+            prevModalDialog.classList.add('show');
             prevModalDialog.classList.remove('hide');
             closeModal();
         }, 4000);
     }
-
 
 
 }); 

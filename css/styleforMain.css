@@ -606,7 +606,7 @@ a {
 }
 
 .footer {
-  min-height: 180px;
+  min-height: 100px;
   background-color: #303030;
   padding: 45px 50px 50px 50px;
   color: #fff;
@@ -778,7 +778,7 @@ a {
   .header .header__left-block .header__slogan {
     align-items: center;
     display: flex;
-    font-size: 3vw;
+    font-size: 12px;
     font-weight: 700;
     padding-right: 11vw;
   }
@@ -809,11 +809,11 @@ a {
     height: 55vw;
   }
   .preview .container .tabcontainer .tabcontent .tabcontent__descr {
-    top: 50%;
+    top: 65%;
     left: -10px;
     width: 65vw;
-    font-size: 3vw;
-    line-height: 4vw;
+    font-size: 12px;
+    line-height: 20px;
     padding: 25px;
   }
   .preview .container .tabheader {
@@ -822,7 +822,7 @@ a {
   }
   .preview .container .tabheader h3 {
     text-align: center;
-    font-size: 2vw;
+    font-size: 16px;
   }
   .preview .container .tabheader .tabheader__items {
     border: none;
@@ -835,12 +835,12 @@ a {
   }
   .preview .container .tabheader .tabheader__items .tabheader__item {
     font-weight: 500;
-    font-size: 2vw;
+    font-size: 12px;
     margin-top: 0;
     text-align: center;
-    padding: 10px;
+    padding: calc(3px + 1.5vw) 10px;
     background-color: #DFDFDF;
-    border-radius: 10px;
+    border-radius: 50vw;
   }
   .preview .container .tabheader .tabheader__items .tabheader__item_active {
     background-color: #9B9B9B;
@@ -853,7 +853,7 @@ a {
   }
   .offer .bgc_y {
     width: 100%;
-    height: calc(350px + 100vw);
+    height: calc(210px + 140vw);
   }
   .offer .container {
     padding: 0 15px;
@@ -867,12 +867,12 @@ a {
     text-align: center;
   }
   .offer .container .offer__text .title {
-    font-size: 5vw;
+    font-size: 18px;
     font-weight: 500;
   }
   .offer .container .offer__text .offer__descr {
-    font-size: 3.5vw;
-    line-height: 6vw;
+    font-size: 14px;
+    line-height: 20px;
   }
   .offer .container .offer__slider {
     width: 100%;
@@ -909,17 +909,17 @@ a {
   }
   .offer .container .offer__advantages .offer_advantages-container h2 {
     margin-top: 20px;
-    font-size: 4vw;
+    font-size: 16px;
   }
   .offer .container .offer__advantages .offer_advantages-container .offer__advantages-text {
-    font-size: 3.5vw;
-    line-height: 5vw;
+    line-height: 20px;
+    font-size: 12px;
   }
   .order {
     margin-top: 30px;
   }
   .order .container .title {
-    font-size: 5vw;
+    font-size: 18px;
   }
   .order .container .order__form {
     flex-direction: column;
@@ -931,20 +931,22 @@ a {
   .order .container .order__form .down__arrow {
     display: block;
     width: 3vw;
+    max-width: 10px;
     margin-top: 15px;
   }
   .order .container .order__form .order_mob {
-    border-radius: 15px;
+    border-radius: 10vw;
     margin-top: 15px;
-    width: 80vw;
-    height: 13vw;
+    width: 70vw;
+    font-size: 14px;
+    height: calc(30px + 6vw);
   }
   .promotion {
     padding: 50px 10px 100px;
   }
   .promotion .bgc_y {
     width: 100%;
-    height: 380px;
+    height: calc(300px + 10vw);
   }
   .promotion .container {
     flex-direction: column;
@@ -955,11 +957,12 @@ a {
   }
   .promotion .container .promotion__text .title {
     text-align: center;
-    font-size: 6vw;
+    font-size: 18px;
   }
   .promotion .container .promotion__text .promotion__descr {
     padding: 0 20px 20px 20px;
-    font-size: 3.5vw;
+    font-size: 14px;
+    line-height: calc(10px + 3vw);
   }
   .promotion .container .promotion__timer {
     width: 100%;
@@ -968,18 +971,18 @@ a {
   .promotion .container .promotion__timer .title {
     text-align: center;
     padding: 0;
-    font-size: 7vw;
+    font-size: 5vw;
   }
   .promotion .container .promotion__timer .timer {
-    padding: 0 30px;
+    padding: 0 10px;
   }
   .promotion .container .promotion__timer .timer .timer__block {
-    width: 14vw;
-    height: 15.5vw;
-    font-size: 2.3vw;
+    width: 65px;
+    height: 80px;
+    font-size: 14px;
   }
   .promotion .container .promotion__timer .timer .timer__block span {
-    font-size: 6vw;
+    font-size: 30px;
     margin-top: 20%;
   }
   .divider {
@@ -999,10 +1002,10 @@ a {
     width: 33%;
   }
   .footer .container .subtitle {
-    font-size: 3vw;
+    font-size: 16px;
   }
   .footer .container .link {
-    font-size: 3vw;
+    font-size: 14px;
   }
   .footer .container .pepper {
     width: 33%;
@@ -1011,7 +1014,8 @@ a {
     justify-content: center;
   }
   .footer .container .pepper img {
-    width: 50px;
+    width: 10vw;
+    max-width: 50px;
   }
   .footer .container .call {
     width: 33%;

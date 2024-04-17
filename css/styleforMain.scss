@@ -672,7 +672,7 @@ a {
 }
 
 .footer {
-	min-height: 180px;
+	min-height: 100px;
 	background-color: $background-color_2;
 	padding: 45px 50px 50px 50px;
 	color: $color_1;
@@ -881,7 +881,7 @@ a {
 			.header__slogan {
 				align-items: center;
 				display: flex;
-				font-size: 3vw;
+				font-size: 12px;
 				font-weight: 700;
 				padding-right: 11vw;
 			}
@@ -926,11 +926,11 @@ a {
 					height: 55vw;
 
 					.tabcontent__descr {
-						top: 50%;
+						top: 65%;
 						left: -10px;
 						width: 65vw;
-						font-size: 3vw;
-						line-height: 4vw;
+						font-size: 12px;
+						line-height: 20px;
 						padding: 25px;
 					}
 				}
@@ -942,7 +942,7 @@ a {
 
 				h3 {
 					text-align: center;
-					font-size: 2vw;
+					font-size: 16px;
 				}
 
 				.tabheader__items {
@@ -956,12 +956,12 @@ a {
 
 					.tabheader__item {
 						font-weight: 500;
-						font-size: 2vw;
+						font-size: 12px;
 						margin-top: 0;
 						text-align: center;
-						padding: 10px;
+						padding: calc(3px + 1.5vw) 10px;
 						background-color: #DFDFDF;
-						border-radius: 10px;
+						border-radius: 50vw;
 					}
 
 					.tabheader__item_active {
@@ -983,7 +983,7 @@ a {
 
 		.bgc_y {
 			width: 100%;
-			height: calc(350px + 100vw);
+			height: calc(210px + 140vw);
 		}
 
 
@@ -1000,13 +1000,13 @@ a {
 				text-align: center;
 
 				.title {
-					font-size: 5vw;
+					font-size: 18px;
 					font-weight: 500;
 				}
 
 				.offer__descr {
-					font-size: 3.5vw;
-					line-height: 6vw;
+					font-size: 14px;
+					line-height: 20px;
 				}
 			}
 
@@ -1052,12 +1052,12 @@ a {
 
 					h2 {
 						margin-top: 20px;
-						font-size: 4vw;
+						font-size: 16px;
 					}
 
 					.offer__advantages-text {
-						font-size: 3.5vw;
-						line-height: 5vw;
+						line-height: 20px;
+						font-size: 12px;
 					}
 				}
 			}
@@ -1072,7 +1072,7 @@ a {
 		.container {
 
 			.title {
-				font-size: 5vw;
+				font-size: 18px;
 			}
 
 			.order__form {
@@ -1086,15 +1086,17 @@ a {
 				.down__arrow {
 					display: block;
 					width: 3vw;
+					max-width: 10px;
 					margin-top: 15px;
 				}
 
 
 				.order_mob {
-					border-radius: 15px;
+					border-radius: 10vw;
 					margin-top: 15px;
-					width: 80vw;
-					height: 13vw;
+					width: 70vw;
+					font-size: 14px;
+					height: calc(30px + 6vw);
 				}
 			}
 
@@ -1106,7 +1108,7 @@ a {
 
 		.bgc_y {
 			width: 100%;
-			height: 380px;
+			height: calc(300px + 10vw);
 		}
 
 		.container {
@@ -1118,12 +1120,13 @@ a {
 
 				.title {
 					text-align: center;
-					font-size: 6vw;
+					font-size: 18px;
 				}
 
 				.promotion__descr {
 					padding: 0 20px 20px 20px;
-					font-size: 3.5vw;
+					font-size: 14px;
+					line-height: calc(10px + 3vw);
 				}
 			}
 
@@ -1134,19 +1137,19 @@ a {
 				.title {
 					text-align: center;
 					padding: 0;
-					font-size: 7vw;
+					font-size: 5vw;
 				}
 
 				.timer {
-					padding: 0 30px;
+					padding: 0 10px;
 
 					.timer__block {
-						width: 14vw;
-						height: 15.5vw;
-						font-size: 2.3vw;
+						width: 65px;
+						height: 80px;
+						font-size: 14px;
 
 						span {
-							font-size: 6vw;
+							font-size: 30px;
 							margin-top: 20%;
 						}
 					}
@@ -1175,11 +1178,11 @@ a {
 			}
 
 			.subtitle {
-				font-size: 3vw;
+				font-size: 16px;
 			}
 
 			.link {
-				font-size: 3vw;
+				font-size: 14px;
 			}
 
 			.pepper {
@@ -1189,7 +1192,8 @@ a {
 				justify-content: center;
 
 				img {
-					width: 50px;
+					width: 10vw;
+					max-width: 50px;
 				}
 			}
 
