@@ -168,7 +168,8 @@ window.addEventListener('DOMContentLoaded', () => {
         offerSwitchPrev = document.querySelector('.offer__slider-prev'),
         offerSwitchNext = document.querySelector('.offer__slider-next'),
         currentValueOffer = document.querySelector('#current'),
-        width = window.getComputedStyle(slidesWrapper).width;
+        width = window.getComputedStyle(slidesWrapper).width,
+        height = window.getComputedStyle(slidesWrapper).height;
 
     let current = 1,
         offset = 0;
@@ -183,6 +184,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     offers.forEach(slide => {
         slide.style.width = width;
+        slide.style.height = height;
+
     });
 
     offerSwitchNext.addEventListener('click', () => {
