@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext";
 * {
   box-sizing: border-box;
@@ -157,6 +158,14 @@ a {
   width: 45%;
   height: 45px;
   background-color: #000;
+}
+.order .container .order__form select {
+  -webkit-appearance: none;
+  /* Сбрасываем стандартное оформление волшебство */
+  -moz-appearance: none;
+  /* Удаляем макеты элементов управления в Firefox */
+  appearance: none;
+  /* Отключаем стандартные макеты */
 }
 
 .modal {

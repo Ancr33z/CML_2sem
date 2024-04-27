@@ -36,8 +36,15 @@
                 <form action="#" class="order__form">
                     <input required placeholder="Имя" name="name" type="text" class="order__input order_mob">
                     <input required placeholder="Фамилия" name="serName" type="text" class="order__input order_mob">
-                    <input required placeholder="Тип питания" name="foodType" type="text"
-                        class="order__input order_mob">
+                    <!-- <input required placeholder="Тип питания" name="foodType" type="text"
+                        class="order__input order_mob"> -->
+                    <select class="order__input" id="fruits" name="fruits">
+                        <option class="order__input" value="choose">Тип питания:</option>
+                        <option class="order__input" value="fitnes">Фитнес</option>
+                        <option class="order__input" value="elite">Премиум</option>
+                        <option class="order__input" value="post">Постное</option>
+                        <option class="order__input" value="balance">Сбалансированное</option>
+                    </select>
                     <div class="input__wrap">
                         <input id="index" required placeholder="Почтовый индекс" name="digit" type="number"
                             class="order__input order_mob">

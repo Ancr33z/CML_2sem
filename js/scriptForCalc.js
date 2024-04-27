@@ -100,10 +100,10 @@ window.addEventListener('DOMContentLoaded', () => {
         thanksModal.classList.add('modal__dialog');
         thanksModal.innerHTML = `
             <div class="modal__content">
-                <div class="modal__close" data-close>×</div>
                 <div class="modal__title">${message}</div>
             </div>
         `;
+
         document.querySelector('.modal').append(thanksModal);
         setTimeout(() => {
             thanksModal.remove();
