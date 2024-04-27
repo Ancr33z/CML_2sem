@@ -34,5 +34,5 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
     });
 
-    // const modalTimerId = setTimeout(openModal, 10000);
+    const modalTimerId = setTimeout(openModal, 50000);
 });
