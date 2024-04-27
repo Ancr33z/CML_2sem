@@ -225,6 +225,11 @@ a {
   outline: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .footer {
   min-height: 100px;
   background-color: #303030;

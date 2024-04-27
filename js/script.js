@@ -306,7 +306,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             ).then(data => data.text())
                 .then(data => {
-                    console.log(data);
                     showThanksModal(message.success);
                     statusMessage.remove();
                 }).catch(() => {

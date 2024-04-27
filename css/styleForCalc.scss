@@ -473,6 +473,8 @@ a {
     overflow: hidden;
     background-color: $background-color_3;
 
+
+
     .btn {
         display: block;
         width: 280px;
@@ -527,4 +529,9 @@ a {
             }
         }
     }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }

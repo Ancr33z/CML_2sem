@@ -1,5 +1,4 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext";
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,7 +25,6 @@ a {
   transition: 0.3s all;
   outline: 0;
 }
-
 .btn:hover {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
@@ -70,11 +68,9 @@ a {
   height: 110px;
   padding: 0 5vw;
 }
-
 .header .header__burger {
   display: none;
 }
-
 .header .header__background {
   background-color: rgba(255, 255, 255, 0.65);
   position: absolute;
@@ -83,26 +79,21 @@ a {
   z-index: -2;
   left: 0;
 }
-
 .header .header__left-block {
   display: flex;
   justify-content: space-between;
   min-width: 650px;
 }
-
 .header .header__logo {
   max-width: 170px;
 }
-
 .header .header__logo img {
   width: 100%;
 }
-
 .header .header__links {
   display: flex;
   align-items: center;
 }
-
 .header .header__link {
   position: relative;
   margin-right: 45px;
@@ -110,7 +101,6 @@ a {
   font-size: 18px;
   color: #303030;
 }
-
 .header .header__link:after {
   content: "";
   position: absolute;
@@ -122,7 +112,6 @@ a {
   height: 8px;
   background: #54ed39;
 }
-
 .header .header__link:last-child {
   margin-right: 0;
 }
@@ -181,35 +170,29 @@ a {
   padding: 45px 50px 50px 50px;
   color: #fff;
 }
-
 .footer .container {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-
 .footer .subtitle {
   font-size: 20px;
 }
-
 .footer .link {
   display: block;
   margin-top: 15px;
   font-size: 16px;
   color: #fff;
 }
-
 .footer .call {
   text-align: right;
 }
-
 .footer .pepper {
   width: 60px;
   height: 60px;
   padding-right: 100px;
 }
-
 .footer .pepper img {
   width: 60px;
   height: 60px;
@@ -226,7 +209,6 @@ a {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 .modal .btn {
   display: block;
   width: 280px;
@@ -282,6 +264,11 @@ a {
   outline: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 /*
 	/----------------------------------------------\
 
@@ -294,28 +281,23 @@ a {
     margin-right: 30px;
   }
 }
-
 @media (min-width: 320px) and (max-width: 960px) {
   .backgroundFoto {
     background-size: 250%;
     height: 100%;
     width: 100%;
   }
-
   .header {
     background: rgba(222, 222, 222, 0.3098039216);
     height: 110px;
   }
-
   .header .header__left-block {
     width: 100%;
     min-width: 0;
   }
-
   .header .header__left-block .header__logo {
     width: 110px;
   }
-
   .header .header__left-block .header__slogan {
     align-items: center;
     display: flex;
@@ -323,28 +305,22 @@ a {
     font-weight: 700;
     padding-right: 11vw;
   }
-
   .header .header__left-block .header__burger {
     align-items: center;
     display: flex;
   }
-
   .header .header__left-block .header__burger img {
     width: 45px;
   }
-
   .header .header__left-block .header__links {
     display: none;
   }
-
   .header .header__right-block {
     display: none;
   }
-
   .about {
     flex-direction: column;
   }
-
   .about .about__container {
     display: flex;
     flex-direction: column;
@@ -354,77 +330,62 @@ a {
     max-width: 1000px;
     padding: 20px 30px;
   }
-
   .about .about__container .about__title {
     display: block;
     width: 100%;
     font-size: 18px;
   }
-
   .about .about__container .about__text {
     width: 100%;
     display: block;
     font-size: 14px;
   }
-
   main {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .about__cont {
     width: 90vw;
   }
-
   .about__cont .about__container__end {
     padding: 10px 30px;
   }
-
   .about__cont .about__container__end .about__title {
     font-size: 18px;
   }
-
   .about__cont .about__container__end .about__text {
     font-size: 14px;
   }
-
   .footer {
     padding: 15px 20px;
     height: 100px;
   }
-
   .footer .container {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   .footer .container .social {
     width: 33%;
   }
-
   .footer .container .subtitle {
     font-size: 16px;
   }
-
   .footer .container .link {
     font-size: 14px;
   }
-
   .footer .container .pepper {
     width: 33%;
     padding: 0;
     display: flex;
     justify-content: center;
   }
-
   .footer .container .pepper img {
     width: 10vw;
     max-width: 50px;
   }
-
   .footer .container .call {
     width: 33%;
   }
