@@ -377,6 +377,18 @@ a {
 
 		.nav__container {
 
+			.header__right-block {
+
+				button {
+					border-radius: 15px;
+					background-color: #000;
+					color: #fff;
+					padding: 15px 20px;
+					width: auto;
+					height: auto;
+				}
+			}
+
 			display: flex;
 			width: 100%;
 			height: 100%;
@@ -423,12 +435,12 @@ input::-webkit-inner-spin-button {
 
 	.header {
 		background: #dedede4f;
-		height: 110px;
+		height: 70px;
 
 		.header__left-block {
 			width: 100%;
+			max-width: 10000px;
 			min-width: 0;
-
 
 			.header__logo {
 				width: 110px;
@@ -437,12 +449,14 @@ input::-webkit-inner-spin-button {
 			.header__slogan {
 				align-items: center;
 				display: flex;
-				font-size: 3vw;
+				font-size: 12px;
 				font-weight: 700;
 				padding-right: 11vw;
 			}
 
 			.header__burger {
+
+				display: block;
 				align-items: center;
 				display: flex;
 
@@ -461,6 +475,9 @@ input::-webkit-inner-spin-button {
 			display: none;
 		}
 
+		.header__background {
+			height: 70px;
+		}
 	}
 
 	.about {
@@ -552,5 +569,9 @@ input::-webkit-inner-spin-button {
 			}
 
 		}
+	}
+
+	.modal__content {
+		padding: 40px 10px;
 	}
 }

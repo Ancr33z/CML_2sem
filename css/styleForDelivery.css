@@ -105,10 +105,10 @@ a {
 }
 
 .order {
-  padding-bottom: 70px;
+  margin-bottom: 80px;
 }
 .order .container {
-  margin-top: 50px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -351,6 +351,14 @@ input::-webkit-inner-spin-button {
   justify-content: center;
   align-items: center;
 }
+.burger__links .burger__nav__container .nav__container .header__right-block button {
+  border-radius: 15px;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 20px;
+  width: auto;
+  height: auto;
+}
 .burger__links .burger__nav__container .nav__container a {
   margin-bottom: 50px;
   margin-right: 0;
@@ -423,6 +431,9 @@ input::-webkit-inner-spin-button {
   .header .header__left-block .header__links {
     display: none;
   }
+  .header .header__background {
+    height: 70px;
+  }
   .header .header__right-block {
     display: none;
   }
@@ -486,5 +497,8 @@ input::-webkit-inner-spin-button {
   }
   .footer .container .call {
     width: 33%;
+  }
+  .modal__content {
+    padding: 40px 10px;
   }
 }

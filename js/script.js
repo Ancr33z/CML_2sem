@@ -123,7 +123,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function openModal() {
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
-        clearInterval(modalTimerId);
+        // clearInterval(modalTimerId);
     }
 
     modalTrigger.forEach(btn => {
@@ -148,7 +148,7 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
     });
 
-    const modalTimerId = setTimeout(openModal, 50000);
+    // const modalTimerId = setTimeout(openModal, 50000);
 
     function showModalByScroll() {
         if (window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1) {
@@ -331,7 +331,7 @@ window.addEventListener('DOMContentLoaded', () => {
             prevModalDialog.classList.add('show');
             prevModalDialog.classList.remove('hide');
             closeModal();
-        }, 4000);
+        }, 2000);
     }
 
 }); 

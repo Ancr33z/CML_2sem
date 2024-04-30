@@ -133,10 +133,10 @@ a {
 }
 
 .order {
-    padding-bottom: 70px;
+    margin-bottom: 80px;
 
     .container {
-        margin-top: 50px;
+        margin-top: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -397,6 +397,18 @@ input::-webkit-inner-spin-button {
 
         .nav__container {
 
+            .header__right-block {
+
+                button {
+                    border-radius: 15px;
+                    background-color: #000;
+                    color: #fff;
+                    padding: 15px 20px;
+                    width: auto;
+                    height: auto;
+                }
+            }
+
             display: flex;
             width: 100%;
             height: 100%;
@@ -510,6 +522,10 @@ input::-webkit-inner-spin-button {
             }
         }
 
+        .header__background {
+            height: 70px;
+        }
+
         .header__right-block {
             display: none;
         }
@@ -604,5 +620,9 @@ input::-webkit-inner-spin-button {
             }
 
         }
+    }
+
+    .modal__content {
+        padding: 40px 10px;
     }
 }

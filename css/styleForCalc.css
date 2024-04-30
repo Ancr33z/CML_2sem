@@ -512,6 +512,14 @@ a {
   justify-content: center;
   align-items: center;
 }
+.burger__links .burger__nav__container .nav__container .header__right-block button {
+  border-radius: 15px;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 20px;
+  width: auto;
+  height: auto;
+}
 .burger__links .burger__nav__container .nav__container a {
   margin-bottom: 50px;
   margin-right: 0;
@@ -522,6 +530,13 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
+/*
+	/----------------------------------------------\
+
+	--------------------media-----------------------
+
+	\----------------------------------------------/
+*/
 @media screen and (max-width: 1400px) {
   .header .header__left-block {
     min-width: 0;
@@ -859,5 +874,8 @@ input::-webkit-inner-spin-button {
   }
   .calculating .container .calculating__total .calculating__result span {
     font-size: 42px;
+  }
+  .modal__content {
+    padding: 40px 10px;
   }
 }
