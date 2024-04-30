@@ -548,7 +548,7 @@ input::-webkit-inner-spin-button {
     display: none;
   }
 }
-@media (min-width: 320px) and (max-width: 960px) {
+@media (min-width: 320px) and (max-width: 980px) {
   .header {
     background: rgba(222, 222, 222, 0.3098039216);
     height: 70px;
@@ -582,76 +582,21 @@ input::-webkit-inner-spin-button {
   .header .header__right-block {
     display: none;
   }
-  .calculating .container {
-    padding: 50px 0;
-  }
   .calculating .container .title {
-    text-align: center;
-  }
-  .calculating .container .calculating__field {
-    width: 100%;
-    margin-top: 50px;
-    background: rgba(146, 242, 255, 0.15);
-    padding: 30px 0 40px 0;
-  }
-  .calculating .container .calculating__field .calculating__subtitle {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 30px;
-  }
-  .calculating .container .calculating__field .calculating__subtitle:first-child {
-    margin-top: 0;
-  }
-  .calculating .container #gender:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    width: 16px;
-    height: 16px;
-    background: url(../icons/switch.svg) center center/cover no-repeat;
+    font-size: 24px;
   }
   .calculating .container .calculating__choose {
     width: 100%;
     flex-wrap: wrap;
-    position: relative;
-    display: flex;
-    margin-top: 30px;
-    justify-content: center;
-  }
-  .calculating .container .calculating__choose .calculating__choose-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-    height: 50px;
-    padding: 0 10px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: none;
-    text-align: center;
-    font-size: 14px;
-    cursor: pointer;
-    outline: 0;
-    transition: 0.3s all;
-  }
-  .calculating .container .calculating__choose .calculating__choose-item_active {
-    color: #fff;
-    background-color: #54ed39;
   }
   .calculating .container .calculating__choose_medium {
     width: 100%;
-    justify-content: space-between;
     padding: 20px 35px;
   }
   .calculating .container .calculating__choose_big {
     width: 100%;
-    justify-content: space-between;
     align-items: center;
-    margin: 30px auto 0 auto;
-    padding: 20px 50px;
+    padding: 20px 150px;
   }
   .calculating .container .calculating__choose_big .calculating__choose-item {
     width: 200px;
@@ -679,7 +624,7 @@ input::-webkit-inner-spin-button {
     font-size: 42px;
   }
   .menu .title {
-    font-size: 20px;
+    font-size: 25px;
   }
   .menu .menu__field .menu__container {
     flex-direction: column;
@@ -705,10 +650,10 @@ input::-webkit-inner-spin-button {
     min-height: none;
   }
   .menu .menu__field .menu__container .menu__item .menu__item__container .menu__item-subtitle {
-    font-size: 16px;
+    font-size: 20px;
   }
   .menu .menu__field .menu__container .menu__item .menu__item__container .menu__item-descr {
-    font-size: 12px;
+    font-size: 14px;
   }
   .menu .menu__field .menu__container .menu__item .menu__item__container .menu__item-divider {
     margin-top: 15px;
@@ -772,73 +717,17 @@ input::-webkit-inner-spin-button {
     width: 33%;
   }
 }
-@media (min-width: 320px) and (max-width: 600px) {
-  .calculating .container {
-    padding: 50px 0;
-  }
-  .calculating .container .title {
-    text-align: center;
-  }
-  .calculating .container .calculating__field {
-    width: 100%;
-    margin-top: 50px;
-    background: rgba(146, 242, 255, 0.15);
-    padding: 30px 0 40px 0;
-  }
-  .calculating .container .calculating__field .calculating__subtitle {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 30px;
-  }
-  .calculating .container .calculating__field .calculating__subtitle:first-child {
-    margin-top: 0;
-  }
-  .calculating .container #gender:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    width: 16px;
-    height: 16px;
-    background: url(../icons/switch.svg) center center/cover no-repeat;
-  }
+@media (min-width: 320px) and (max-width: 700px) {
   .calculating .container .calculating__choose {
     width: 100%;
-    flex-wrap: wrap;
-    position: relative;
-    display: flex;
-    margin-top: 30px;
-    justify-content: center;
-  }
-  .calculating .container .calculating__choose .calculating__choose-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-    height: 50px;
-    padding: 0 10px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: none;
-    text-align: center;
-    font-size: 14px;
-    cursor: pointer;
-    outline: 0;
-    transition: 0.3s all;
-  }
-  .calculating .container .calculating__choose .calculating__choose-item_active {
-    color: #fff;
-    background-color: #54ed39;
   }
   .calculating .container .calculating__choose_medium {
     width: 100%;
     justify-content: center;
     padding: 20px 35px;
-  }
-  .calculating .container .calculating__choose_medium :first-child {
-    margin-right: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .calculating .container .calculating__choose_medium .calculating__choose-item {
     margin-bottom: 35px;
@@ -851,31 +740,122 @@ input::-webkit-inner-spin-button {
     padding: 20px 50px;
   }
   .calculating .container .calculating__choose_big .calculating__choose-item {
-    width: 200px;
     margin-bottom: 35px;
   }
   .calculating .container .calculating__divider {
     width: 100%;
-    height: 1px;
-    margin: 40px auto;
-    background-color: rgba(0, 0, 0, 0.2);
   }
   .calculating .container .calculating__total {
     width: 100%;
-    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .calculating .container .calculating__total .calculating__result span {
+    font-size: 30px;
+  }
+  .menu .title {
+    font-size: 20px;
+  }
+  .menu .menu__field .menu__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu .menu__field .menu__container .menu__item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 80%;
+    min-height: 0;
+    margin-bottom: 35px;
+  }
+  .menu .menu__field .menu__container .menu__item .menu__imgage {
+    width: 100%;
+    height: 190px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
   }
-  .calculating .container .calculating__total .calculating__result {
-    font-size: 18px;
+  .menu .menu__field .menu__container .menu__item .menu__imgage img {
+    width: 100%;
+  }
+  .menu .menu__field .menu__container .menu__item .menu__item__container {
+    width: 100%;
+    min-height: none;
+  }
+  .menu .menu__field .menu__container .menu__item .menu__item__container .menu__item-subtitle {
+    text-align: center;
+    font-size: 16px;
+  }
+  .menu .menu__field .menu__container .menu__item .menu__item__container .menu__item-descr {
+    text-align: center;
+    font-size: 12px;
+  }
+  .menu .menu__field .menu__container .menu__item .menu__item__container .menu__item-divider {
+    margin-top: 15px;
+  }
+  .menu {
+    padding: 40px 0 50px 0;
+  }
+  .menu .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .menu .title {
+    text-align: center;
+  }
+  .menu__field {
+    margin-top: 50px;
+    width: 100%;
+    background: rgba(249, 254, 126, 0.25);
+    padding: 50px 10px;
+  }
+  .menu__item {
+    width: 320px;
+    min-height: 450px;
+    background: #fff;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .menu__item img {
+    width: 100%;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu__item-subtitle {
     font-weight: 700;
+    font-size: 18px;
+    padding: 0 20px;
+    margin-top: 20px;
   }
-  .calculating .container .calculating__total .calculating__result span {
-    font-size: 42px;
+  .menu__item-descr {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  .menu__item-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-top: 40px;
+  }
+  .menu__item-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .menu__item-price span {
+    font-size: 24px;
+    font-weight: 700;
   }
   .modal__content {
     padding: 40px 10px;
+  }
+}
+@media (min-width: 320px) and (max-width: 700px) {
+  .calculating__choose_big {
+    align-items: center;
+    flex-direction: column;
   }
 }

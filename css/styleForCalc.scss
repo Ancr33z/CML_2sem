@@ -661,7 +661,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-@media (min-width: 320px) and (max-width: 960px) {
+@media (min-width: 320px) and (max-width: 980px) {
     .header {
         background: #dedede4f;
         height: 70px;
@@ -709,87 +709,27 @@ input::-webkit-inner-spin-button {
 
 
     .calculating {
+
         .container {
-            padding: 50px 0;
 
             .title {
-                text-align: center;
-            }
-
-            .calculating__field {
-                width: 100%;
-                margin-top: 50px;
-                background: rgba(146, 242, 255, .15);
-                padding: 30px 0 40px 0;
-
-                .calculating__subtitle {
-                    text-align: center;
-                    font-size: 18px;
-                    font-weight: 700;
-                    margin-top: 30px;
-
-                    &:first-child {
-                        margin-top: 0;
-                    }
-                }
-            }
-
-            #gender {
-                &:after {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    display: block;
-                    width: 16px;
-                    height: 16px;
-                    background: url(../icons/switch.svg) center center/cover no-repeat;
-                }
+                font-size: 24px;
             }
 
             .calculating__choose {
                 width: 100%;
                 flex-wrap: wrap;
-                position: relative;
-                display: flex;
-                margin-top: 30px;
-                justify-content: center;
-
-                .calculating__choose-item {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 170px;
-                    height: 50px;
-                    padding: 0 10px;
-                    background: #fff;
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
-                    border: none;
-                    text-align: center;
-                    font-size: 14px;
-                    cursor: pointer;
-                    outline: 0;
-                    transition: .3s all;
-                }
-
-                .calculating__choose-item_active {
-                    color: $color_1;
-                    background-color: $background-color_5;
-                }
             }
 
             .calculating__choose_medium {
                 width: 100%;
-                justify-content: space-between;
                 padding: 20px 35px;
             }
 
             .calculating__choose_big {
                 width: 100%;
-                justify-content: space-between;
                 align-items: center;
-                margin: 30px auto 0 auto;
-                padding: 20px 50px;
+                padding: 20px 150px;
 
                 .calculating__choose-item {
                     width: 200px;
@@ -831,7 +771,7 @@ input::-webkit-inner-spin-button {
 
     .menu {
         .title {
-            font-size: 20px;
+            font-size: 25px;
         }
 
         .menu__field {
@@ -861,11 +801,11 @@ input::-webkit-inner-spin-button {
                         min-height: none;
 
                         .menu__item-subtitle {
-                            font-size: 16px;
+                            font-size: 20px;
                         }
 
                         .menu__item-descr {
-                            font-size: 12px;
+                            font-size: 14px;
                         }
 
                         .menu__item-divider {
@@ -959,86 +899,23 @@ input::-webkit-inner-spin-button {
     }
 }
 
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 320px) and (max-width: 700px) {
 
     .calculating {
         .container {
-            padding: 50px 0;
-
-            .title {
-                text-align: center;
-            }
-
-            .calculating__field {
-                width: 100%;
-                margin-top: 50px;
-                background: rgba(146, 242, 255, .15);
-                padding: 30px 0 40px 0;
-
-                .calculating__subtitle {
-                    text-align: center;
-                    font-size: 18px;
-                    font-weight: 700;
-                    margin-top: 30px;
-
-                    &:first-child {
-                        margin-top: 0;
-                    }
-                }
-            }
-
-            #gender {
-                &:after {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    display: block;
-                    width: 16px;
-                    height: 16px;
-                    background: url(../icons/switch.svg) center center/cover no-repeat;
-                }
-            }
 
             .calculating__choose {
                 width: 100%;
-                flex-wrap: wrap;
-                position: relative;
-                display: flex;
-                margin-top: 30px;
-                justify-content: center;
-
-                .calculating__choose-item {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 170px;
-                    height: 50px;
-                    padding: 0 10px;
-                    background: #fff;
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
-                    border: none;
-                    text-align: center;
-                    font-size: 14px;
-                    cursor: pointer;
-                    outline: 0;
-                    transition: .3s all;
-                }
-
-                .calculating__choose-item_active {
-                    color: $color_1;
-                    background-color: $background-color_5;
-                }
             }
 
             .calculating__choose_medium {
                 width: 100%;
                 justify-content: center;
                 padding: 20px 35px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-                :first-child {
-                    margin-right: 50px;
-                }
 
                 .calculating__choose-item {
                     margin-bottom: 35px;
@@ -1055,40 +932,166 @@ input::-webkit-inner-spin-button {
                 padding: 20px 50px;
 
                 .calculating__choose-item {
-                    width: 200px;
                     margin-bottom: 35px;
                 }
             }
 
             .calculating__divider {
                 width: 100%;
-                height: 1px;
-                margin: 40px auto;
-                background-color: $background-color_6;
             }
 
             .calculating__total {
                 width: 100%;
-                margin: 0 auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 flex-wrap: wrap;
 
                 .calculating__result {
-
-                    font-size: 18px;
-                    font-weight: 700;
-
                     span {
-                        font-size: 42px;
+                        font-size: 30px;
                     }
                 }
             }
         }
     }
 
+    .menu {
+        .title {
+            font-size: 20px;
+        }
+
+        .menu__field {
+
+            .menu__container {
+                flex-direction: column;
+                align-items: center;
+
+                .menu__item {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    width: 80%;
+                    min-height: 0;
+                    margin-bottom: 35px;
+
+                    .menu__imgage {
+                        width: 100%;
+                        height: 190px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .menu__item__container {
+                        width: 100%;
+                        min-height: none;
+
+                        .menu__item-subtitle {
+                            text-align: center;
+                            font-size: 16px;
+                        }
+
+                        .menu__item-descr {
+                            text-align: center;
+                            font-size: 12px;
+                        }
+
+                        .menu__item-divider {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .menu {
+        padding: 40px 0 50px 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .title {
+            text-align: center;
+        }
+    }
+
+    .menu__field {
+        margin-top: 50px;
+        width: 100%;
+        background: rgba(249, 254, 126, .25);
+        padding: 50px 10px;
+    }
+
+    .menu__item {
+        width: 320px;
+        min-height: 450px;
+        background: #fff;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, .25);
+        font-size: 16px;
+        font-weight: 500;
+
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+
+    .menu__item-subtitle {
+        font-weight: 700;
+        font-size: 18px;
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    .menu__item-descr {
+        margin-top: 20px;
+        padding: 0 20px;
+
+    }
+
+    .menu__item-divider {
+        width: 100%;
+        height: 1px;
+        background-color: $background-color_7;
+        margin-top: 40px;
+    }
+
+    .menu__item-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+
+        span {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+
+
+
+
+
     .modal__content {
         padding: 40px 10px;
     }
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+
+    .calculating__choose_big {
+        align-items: center;
+        flex-direction: column;
+
+    }
+
 }
