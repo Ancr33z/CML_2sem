@@ -102,10 +102,12 @@
         <div class="container">
             <div class="title">Заказывай пробный день прямо сейчас!</div>
             <form action="#" class="order__form">
-                <input required placeholder="Ваше имя" name="name" type="text" class="order__input">
-                <input required placeholder="Ваш номер телефона" name="phone" type="number" class="order__input">
-                <img src="icons/right.svg" alt="right">
-                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                <input required placeholder="Ваше имя" name="name" type="text" class="order__input order_mob">
+                <input required placeholder="Ваш номер телефона" name="phone" type="phone"
+                    class="order__input order_mob">
+                <img src="icons/right.svg" alt="right" class="right__arrow">
+                <img src="icons/down.svg" alt="down" class="down__arrow">
+                <button class="btn btn_dark btn_min order_mob">Перезвонить мне</button>
             </form>
         </div>
     </div>
@@ -139,7 +141,19 @@
             </div>
         </div>
     </div>
+    <nav id="hide" class="burger__links ">
+        <div class="burger__nav__container">
+            <div data-close class="burger__close" data-close>&times;</div>
+            <div class="nav__container">
+                <a href="Main.html" class="header__link">Главная</a>
+                <a href="Доставка.html" class="header__link">Доставка питания</a>
+                <a href="Расчёт.html" class="header__link">Расчёт питания</a>
+                <a href="О нас.html" class="header__link">О нас</a>
+            </div>
+        </div>
+    </nav>
 </body>
 <script src="js/scriptForCalc.js"></script>
+<script src="js/burger.js"></script>
 
 </html>

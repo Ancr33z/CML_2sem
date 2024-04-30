@@ -28,7 +28,7 @@ a {
 }
 
 
-.hide {
+#hide {
 	display: none;
 }
 
@@ -87,6 +87,9 @@ a {
 	font-weight: 400;
 }
 
+
+
+
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -132,30 +135,32 @@ a {
 		align-items: center;
 	}
 
-	.header__link {
-		position: relative;
-		margin-right: 45px;
-		font-weight: 700;
-		font-size: 18px;
-		color: $color_2;
+}
 
-		&:after {
-			content: '';
-			position: absolute;
-			display: block;
-			width: 110%;
-			left: -5%;
-			bottom: -1px;
-			z-index: -1;
-			height: 8px;
-			background: #54ed39;
-		}
+.header__link {
+	position: relative;
+	margin-right: 45px;
+	font-weight: 700;
+	font-size: 18px;
+	color: $color_2;
 
-		&:last-child {
-			margin-right: 0;
-		}
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 110%;
+		left: -5%;
+		bottom: -1px;
+		z-index: -1;
+		height: 8px;
+		background: #54ed39;
+	}
+
+	&:last-child {
+		margin-right: 0;
 	}
 }
+
 
 .sidepanel {
 	position: fixed;
@@ -787,6 +792,77 @@ a {
 	outline: 0;
 }
 
+
+#show {
+	position: fixed;
+	display: block;
+	background-color: #99c5d5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation: ani 0.4s ease;
+}
+
+@keyframes ani {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.burger__links {
+	display: block;
+	align-items: center;
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+
+	.burger__nav__container {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.burger__close {
+			position: absolute;
+			top: 5px;
+			right: 50px;
+			font-size: 60px;
+			color: $color_5;
+			opacity: .5;
+			font-weight: 700;
+			border: none;
+			background-color: $background-color_8;
+			cursor: pointer;
+		}
+
+		.nav__container {
+
+			display: flex;
+			width: 100%;
+			height: 100%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			a {
+				margin-bottom: 50px;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
@@ -803,6 +879,8 @@ input::-webkit-inner-spin-button {
 	.header {
 
 		.header__left-block {
+			min-width: 0;
+
 			.header__logo {
 				margin-right: 30px;
 			}
@@ -885,7 +963,7 @@ input::-webkit-inner-spin-button {
 		.header__left-block {
 			width: 100%;
 			max-width: 10000px;
-			;
+			min-width: 0;
 
 			.header__logo {
 				width: 110px;

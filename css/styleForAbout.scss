@@ -148,7 +148,7 @@ a {
 	opacity: 0.7;
 	position: fixed;
 	background: url(../img/tabs/vegy.jpg) no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -300,6 +300,98 @@ a {
 	outline: 0;
 }
 
+.header__link {
+	position: relative;
+	margin-right: 45px;
+	font-weight: 700;
+	font-size: 18px;
+	color: $color_2;
+
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 110%;
+		left: -5%;
+		bottom: -1px;
+		z-index: -1;
+		height: 8px;
+		background: #54ed39;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+#show {
+	position: fixed;
+	display: block;
+	background-color: #99c5d5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation: ani 0.4s ease;
+}
+
+@keyframes ani {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.burger__links {
+	display: block;
+	align-items: center;
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+
+	.burger__nav__container {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.burger__close {
+			position: absolute;
+			top: 5px;
+			right: 50px;
+			font-size: 60px;
+			color: $color_5;
+			opacity: .5;
+			font-weight: 700;
+			border: none;
+			background-color: $background-color_8;
+			cursor: pointer;
+		}
+
+		.nav__container {
+
+			display: flex;
+			width: 100%;
+			height: 100%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			a {
+				margin-bottom: 50px;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
@@ -328,11 +420,6 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 320px) and (max-width: 960px) {
 
-	.backgroundFoto {
-		background-size: 250%;
-		height: 100%;
-		width: 100%;
-	}
 
 	.header {
 		background: #dedede4f;

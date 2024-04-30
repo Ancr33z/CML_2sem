@@ -1,11 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
 
-
-
-
-
-
     const tabs = document.querySelectorAll('.tabheader__item'),
         tabsContent = document.querySelectorAll('.tabcontent'),
         tabsParent = document.querySelector('.tabheader__items');
@@ -123,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const modalTrigger = document.querySelectorAll('[data-modal]'),
         modal = document.querySelector('.modal'),
-        modalCloser = document.querySelector('[data-close]');
+        modalCloser = document.querySelectorAll('[data-close]');
 
     function openModal() {
         modal.style.display = 'block';
@@ -338,6 +333,5 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }, 4000);
     }
-
 
 }); 

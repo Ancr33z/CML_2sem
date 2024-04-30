@@ -273,6 +273,89 @@ input::-webkit-inner-spin-button {
   height: 60px;
 }
 
+#show {
+  position: fixed;
+  display: block;
+  background-color: #99c5d5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: ani 0.4s ease;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.header__link {
+  position: relative;
+  margin-right: 45px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #303030;
+}
+.header__link:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 110%;
+  left: -5%;
+  bottom: -1px;
+  z-index: -1;
+  height: 8px;
+  background: #54ed39;
+}
+.header__link:last-child {
+  margin-right: 0;
+}
+
+.burger__links {
+  display: block;
+  align-items: center;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.burger__links .burger__nav__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.burger__links .burger__nav__container .burger__close {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  font-size: 60px;
+  color: #000;
+  opacity: 0.5;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.burger__links .burger__nav__container .nav__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.burger__links .burger__nav__container .nav__container a {
+  margin-bottom: 50px;
+  margin-right: 0;
+}
+
 /*
 	/----------------------------------------------\
 
@@ -281,6 +364,9 @@ input::-webkit-inner-spin-button {
 	\----------------------------------------------/
 */
 @media (min-width: 1000px) and (max-width: 1400px) {
+  .header .header__left-block {
+    min-width: 0;
+  }
   .header .header__left-block .header__logo {
     margin-right: 30px;
   }
@@ -309,10 +395,11 @@ input::-webkit-inner-spin-button {
   }
   .header {
     background: rgba(222, 222, 222, 0.3098039216);
-    height: 110px;
+    height: 70px;
   }
   .header .header__left-block {
     width: 100%;
+    max-width: 10000px;
     min-width: 0;
   }
   .header .header__left-block .header__logo {
@@ -321,11 +408,12 @@ input::-webkit-inner-spin-button {
   .header .header__left-block .header__slogan {
     align-items: center;
     display: flex;
-    font-size: 3vw;
+    font-size: 12px;
     font-weight: 700;
     padding-right: 11vw;
   }
   .header .header__left-block .header__burger {
+    display: block;
     align-items: center;
     display: flex;
   }

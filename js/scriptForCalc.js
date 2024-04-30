@@ -141,13 +141,17 @@ window.addEventListener('DOMContentLoaded', () => {
                 const price = student.querySelector("priceBlock").textContent;
                 tableBody.innerHTML += `
                 <div class="menu__item">
+                    <div class = "menu__imgage">
                     <img src=${scr} alt=${alt}>
+                    </div>
+                    <div class = "menu__item__container">
                     <h3 class="menu__item-subtitle">${title}</h3>
                     <div class="menu__item-descr">${text}</div>
                     <div class="menu__item-divider"></div>
                     <div class="menu__item-price">
                         <div class="menu__item-cost">Цена:</div>
                         <div class="menu__item-total"><span>${price * 3}</span> руб/день</div>
+                    </div>
                     </div>
                 </div>`;
             });
