@@ -14,6 +14,10 @@ a {
   display: none;
 }
 
+#hide {
+  display: none;
+}
+
 .show {
   display: block;
 }
@@ -857,5 +861,20 @@ input::-webkit-inner-spin-button {
   .calculating__choose_big {
     align-items: center;
     flex-direction: column;
+  }
+}
+@media (min-width: 320px) and (max-width: 500px) {
+  .modal .modal__dialog {
+    max-width: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .modal .modal__dialog .modal__content {
+    max-height: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

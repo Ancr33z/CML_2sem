@@ -2,18 +2,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Modal
 
-
-    const forms = document.querySelectorAll('form');
-
-    const message = {
-        loading: 'icons/spinner.svg',
-        success: 'Спасибо! Скоро мы с вами свяжемся',
-        failure: 'Что-то пошло не так...'
-    }
-
     const modalTrigger = document.querySelectorAll('[data-modal]'),
         modal = document.querySelector('.modal'),
-        modalCloser = document.querySelector('[data-close]');
+        modalCloser = document.querySelectorAll('[data-close]');
 
     function openModal() {
         modal.style.display = 'block';
@@ -24,15 +15,17 @@ window.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', openModal)
     });
 
+    modalCloser.forEach(btn => {
+        btn.addEventListener('click', closeModal)
+    });
+
     function closeModal() {
         modal.style.display = 'none';
         document.body.style.overflow = '';
     };
 
-    modalCloser.addEventListener('click', closeModal);
-
     modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
+        if (event.target === modal || event.target.getAttribute('data-close') == '') {
             closeModal();
         }
     });
@@ -42,6 +35,16 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
     });
 
+
+    //forms
+
+    const forms = document.querySelectorAll('form');
+
+    const message = {
+        loading: 'icons/spinner.svg',
+        success: 'Спасибо! Скоро мы с вами свяжемся',
+        failure: 'Что-то пошло не так...'
+    }
 
     forms.forEach(item => {
         postData(item);
@@ -88,8 +91,6 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const modalTimerId = setTimeout(openModal, 50000);
-
     function showThanksModal(message) {
         const prevModalDialog = document.querySelector('.modal__dialog');
         prevModalDialog.classList.remove('show');
@@ -100,27 +101,24 @@ window.addEventListener('DOMContentLoaded', () => {
         thanksModal.classList.add('modal__dialog');
         thanksModal.innerHTML = `
             <div class="modal__content">
+                <div class="modal__close" data-close>×</div>
                 <div class="modal__title">${message}</div>
             </div>
         `;
-
         document.querySelector('.modal').append(thanksModal);
         setTimeout(() => {
             thanksModal.remove();
             prevModalDialog.classList.add('show');
             prevModalDialog.classList.remove('hide');
             closeModal();
-        }, 4000);
-    }
+        }, 2000);
+    };
 
-    function showModalByScroll() {
-        if (window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1) {
-            openModal();
-            window.removeEventListener('scroll', showModalByScroll);
-        }
-    }
 
-    window.addEventListener('scroll', showModalByScroll)
+    const modalTimerId = setTimeout(openModal, 50000);
+
+
+
 
     // Класс для создания карточек
 

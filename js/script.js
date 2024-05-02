@@ -130,6 +130,11 @@ window.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', openModal)
     });
 
+    modalCloser.forEach(btn => {
+        btn.addEventListener('click', closeModal)
+    });
+
+
     function closeModal() {
         modal.style.display = 'none';
         document.body.style.overflow = '';
@@ -148,14 +153,8 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
     });
 
-    const modalTimerId = setTimeout(openModal, 50000);
 
-    function showModalByScroll() {
-        if (window.scrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1) {
-            openModal();
-            window.removeEventListener('scroll', showModalByScroll);
-        }
-    }
+
 
     const slidesWrapper = document.querySelector('.offer__slider-wrapper'),
         slidesField = document.querySelector('.offer__slider-inner'),
@@ -217,44 +216,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         currentValueOffer.textContent = `0${current}`;
     });
-
-
-
-
-    // function showOffer() {
-    //     offers[current].style.display = 'block';
-    //     currentValueOffer.textContent = '0' + (current + 1);
-    // }
-
-    // offerSwitchNext.addEventListener('click', event => {
-    //     if (current < 3) {
-    //         current++;
-    //         hideofferTabContent(offers);
-    //         showOffer();
-    //     }
-    //     else {
-    //         current -= 3;
-    //         hideofferTabContent(offers);
-    //         showOffer();
-    //     }
-    // });
-
-    // offerSwitchPrev.addEventListener('click', event => {
-    //     if (current > 0) {
-    //         current--;
-    //         hideofferTabContent(offers);
-    //         showOffer();
-    //     }
-    //     else {
-    //         current += 3;
-    //         hideofferTabContent(offers);
-    //         showOffer();
-    //     }
-    // });
-
-
-
-    // window.addEventListener('scroll', showModalByScroll)
 
     //forms
 
@@ -333,5 +294,7 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }, 2000);
     }
+
+    const modalTimerId = setTimeout(openModal, 50000);
 
 }); 

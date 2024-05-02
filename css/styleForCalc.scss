@@ -32,6 +32,10 @@ a {
     display: none;
 }
 
+#hide {
+    display: none;
+}
+
 .show {
     display: block;
 }
@@ -1094,4 +1098,27 @@ input::-webkit-inner-spin-button {
 
     }
 
+
+}
+
+
+@media (min-width: 320px) and (max-width: 500px) {
+
+    .modal {
+
+        .modal__dialog {
+            max-width: none;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+
+            .modal__content {
+                max-height: none;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
 }
