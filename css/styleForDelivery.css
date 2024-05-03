@@ -78,6 +78,7 @@ a {
 .header .header__links {
   display: flex;
   align-items: center;
+  list-style-type: none;
 }
 .header .header__link {
   position: relative;

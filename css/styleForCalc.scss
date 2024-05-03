@@ -74,6 +74,13 @@ a {
     height: 50px;
 }
 
+.divider {
+    width: 330px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $background-color_3;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -127,6 +134,7 @@ a {
     .header__links {
         display: flex;
         align-items: center;
+        list-style-type: none;
     }
 
     .header__link {
@@ -319,6 +327,9 @@ a {
 
     .title {
         text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+
     }
 }
 

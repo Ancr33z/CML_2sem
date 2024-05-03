@@ -55,6 +55,13 @@ a {
   height: 50px;
 }
 
+.divider {
+  width: 330px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -101,6 +108,7 @@ a {
 .header .header__links {
   display: flex;
   align-items: center;
+  list-style-type: none;
 }
 .header .header__link {
   position: relative;
@@ -258,6 +266,8 @@ a {
 }
 .menu .title {
   text-align: center;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .menu__field {
