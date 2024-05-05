@@ -16,8 +16,10 @@
             </div>
             <div class="header__slogan">Живи полной жизнью</div>
             <ul class="header__links">
-                <li href="Доставка.html" class="header__link">Доставка питания</li>
-                <li href="Расчёт.html" class="header__link">Расчёт калорий</li>
+                <li class="header__link"><a href="Доставка.html" class="header__link">Доставка
+                        питания</a></li>
+                <li class="header__link"><a href="Расчёт.html" class="header__link">Расчёт калорий</a>
+                </li>
                 <li href="О нас.html" class="header__link"> <a href="О нас.html" class="header__link">О нас </a></li>
             </ul>
             <div class="header__burger"><img src="icons/burger.svg" alt=""></div>
@@ -55,9 +57,11 @@
                     Ваша конституция
                 </div>
                 <div class="calculating__choose calculating__choose_medium">
-                    <input type="number" id="height" placeholder="Введите рост" class="calculating__choose-item">
-                    <input type="number" id="weight" placeholder="Введите вес" class="calculating__choose-item">
-                    <input type="number" id="age" placeholder="Введите возраст" class="calculating__choose-item">
+                    <input type="number" min="0" id="height" placeholder="Введите рост"
+                        class="calculating__choose-item">
+                    <input type="number" min="0" id="weight" placeholder="Введите вес" class="calculating__choose-item">
+                    <input type="number" min="0" id="age" placeholder="Введите возраст"
+                        class="calculating__choose-item">
                 </div>
 
                 <div class="calculating__subtitle">

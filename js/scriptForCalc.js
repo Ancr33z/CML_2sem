@@ -212,6 +212,13 @@ window.addEventListener('DOMContentLoaded', () => {
         const input = document.querySelector(selector);
 
         input.addEventListener('input', () => {
+            if (input.value < 0) {
+                input.value *= -1;
+            }
+        });
+
+
+        input.addEventListener('input', () => {
             switch (input.getAttribute('id')) {
                 case 'height':
                     height = +input.value;
